@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&family=Kumbh+Sans:wght@400;700&family=Manrope:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@400;600;700&family=Raleway:wght@400;600&display=swap");
+
+:root {
+  --primary-background: rgb(243, 237, 236);
+  --secondary-background: rgb(231, 224, 223);
+  --primary-font: rgb(0, 0, 0);
+  --primary-font-style: "Raleway", sans-serif;
+  --primary-font-size: 1.5rem;
+}
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+html {
+  overflow-x: hidden;
+  font-family: var(--primary-font-style);
+  scroll-behavior: smooth;
+  background: var(--secondary-background);
+}
+
+.img-header img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.img-header {
+  position: relative;
+}
+.text-overlay {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 70%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.text-overlay h1,
+.text-overlay h3 {
+  color: var(--primary-background);
+  font-weight: 600;
+}
+.text-overlay h1 {
+  font-size: 3.5rem;
+  padding-bottom: 2%;
+}
+.text-overlay h3 {
+  font-size: 2rem;
+}
+.navBar {
+  background: var(--secondary-background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  /*border-bottom: 3px solid gray;*/
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.navBar p {
+  font-size: 1.5rem;
+  height: 100%;
+  text-align: center;
+
+  flex-basis: 30%;
+  background: var(--primary-font);
+
+  font-family: "Poiret One", cursive;
+}
+.logo a {
+  color: var(--primary-background);
+  font-size: 2.3rem;
+  margin-top: 20px;
+  text-decoration: none;
+}
+.navItems {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  justify-content: space-evenly;
+  list-style: none;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.navItems li a {
+  text-decoration: none;
+  color: var(--primary-font);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+.navItems li a:hover {
+  color: var(--primary-background);
+  background: var(--primary-font);
+}
+.navItems li {
+  height: 100%;
+}
+
+.main-container {
+  margin: 100px 5% 0 5%;
+}
+
+.bio-img1 {
+  width: 85%;
+  height: 275px;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0px 10px 11px 0px rgba(0, 0, 0, 0.49);
+}
+.bio {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  font-size: 3rem;
+  width: 100%;
+  margin-top: 100px;
+}
+.bio-info {
+  margin-top: 50px;
+  display: flex;
+  gap: 6%;
+  justify-content: space-around;
+  align-items: center;
+}
+.bio-info p {
+  font-size: 1.5rem;
+  margin: auto 0;
+  width: 60%;
+}
+.bio-img2 {
+  width: 40%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 6px 10px 11px 0px rgba(0, 0, 0, 0.49);
+}
+
+.talent {
+  margin-top: 60px;
+  width: 100%;
+}
+
+.talent-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "talent2 accomplishments"
+    "techniques talent1"
+    "certs certs";
+  gap: 5%;
+}
+.talent-img1 {
+  grid-area: talent1;
+  justify-self: end;
+  border-radius: 15px;
+  box-shadow: 6px 10px 11px 0px rgba(0, 0, 0, 0.49);
+}
+.talent-img2 {
+  grid-area: talent2;
+  justify-self: start;
+  border-radius: 15px;
+  box-shadow: -6px 10px 11px 0px rgba(0, 0, 0, 0.49);
+}
+.accomplishments {
+  grid-area: accomplishments;
+  justify-self: center;
+  align-self: center;
+  display: block;
+
+  color: var(--primary-font);
+}
+.certs {
+  grid-area: certs;
+  justify-self: center;
+}
+
+.techniques {
+  grid-area: techniques;
+  justify-self: center;
+  align-self: center;
+  font-size: var(--primary-font-size);
+}
+.talent-img1,
+.talent-img2 {
+  width: 75%;
+  height: 450px;
+  object-fit: cover;
+}
+.accomplishments h2,
+.techniques h2,
+.certs h2 {
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+.techniques li,
+.certs li,
+.accomplishments li {
+  font-size: var(--primary-font-size);
+  line-height: 1.5;
+  list-style: square;
+}
+.title3 {
+  margin-bottom: 60px;
+  font-size: 3.2rem;
+  text-align: center;
+}
+.carousel {
+  position: relative;
+  height: 500px;
+  width: 50%;
+  margin: 0 auto;
+}
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel__track-container {
+  background: rgb(37, 110, 110);
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+  box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.49);
+}
+.carousel__track {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 250ms ease-in;
+}
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.btn--left {
+  left: -40px;
+  width: 40px;
+  height: 40px;
+}
+.btn--right {
+  right: -40px;
+  width: 40px;
+  height: 40px;
+}
+.carousel__btn p {
+  font-size: 30px;
+}
+.carousel__nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+.carousel__indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0 8px;
+}
+.carousel__indicator.current-slide {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.hidden {
+  display: none;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 20px;
+}
